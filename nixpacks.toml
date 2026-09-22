@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+
+[phases.build]
+cmds = [
+  "NITRO_PRESET=node-server npm run build",
+  "mkdir -p .output/public/assets",
+  "cp -f node_modules/.nitro/vite/services/ssr/assets/*.css .output/public/assets/ 2>/dev/null || true",
+]
+
+[start]
+cmd = "node .output/server/index.mjs"

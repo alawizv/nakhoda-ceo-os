@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NAKHODA",
+      "hasCanvas": false,
+      "bodyTextLen": 422,
+      "bodyTextHash": "4cd65058bf0c16c2919f362fd83e0767b4099820a60767d640f5aa505d76a362",
+      "bodyTextPrefix": "Nakhoda SISTEM OPERASI CEO Jabatan CEO bukan gelar. Itu sistem. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NAKHODA",
+      "hasCanvas": false,
+      "bodyTextLen": 422,
+      "bodyTextHash": "4cd65058bf0c16c2919f362fd83e0767b4099820a60767d640f5aa505d76a362",
+      "bodyTextPrefix": "Nakhoda SISTEM OPERASI CEO Jabatan CEO bukan gelar. Itu sistem. ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
