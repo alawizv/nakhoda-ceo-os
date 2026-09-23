@@ -28,15 +28,15 @@ const NAV = [
   { to: "/", label: "Beranda", icon: Compass, group: "Ringkasan" },
   { to: "/ritme", label: "Jadwal Rutin", icon: CalendarClock, group: "Ringkasan" },
   { to: "/prioritas", label: "Target Utama", icon: Target, group: "Ringkasan" },
-  { to: "/scorecard", label: "Nilai Bisnis", icon: Gauge, group: "Ringkasan" },
+  { to: "/scorecard", label: "Scorecard", icon: Gauge, group: "Ringkasan" },
   { to: "/rencana", label: "Rencana 3 Bulan", icon: Flag, group: "Ringkasan" },
   { to: "/pilar", label: "8 Aspek Bisnis", icon: Layers, group: "Evaluasi" },
   { to: "/diagnostik", label: "Evaluasi Diri", icon: Activity, group: "Evaluasi" },
   { to: "/keputusan", label: "Catatan Keputusan", icon: Scale, group: "Evaluasi" },
   { to: "/tim", label: "Anggota Tim", icon: Users, group: "Evaluasi" },
-  { to: "/jurnal", label: "Catatan Harian", icon: BookOpen, group: "Refleksi" },
+  { to: "/jurnal", label: "Jurnal", icon: BookOpen, group: "Refleksi" },
   { to: "/panduan", label: "Panduan", icon: CircleHelp, group: "Refleksi" },
-  { to: "/playbook", label: "Tips & Strategi", icon: ScrollText, group: "Refleksi" },
+  { to: "/playbook", label: "Playbook", icon: ScrollText, group: "Refleksi" },
 ] as const;
 
 const MOBILE_PRIMARY = ["/", "/pilar", "/ritme", "/diagnostik"] as const;

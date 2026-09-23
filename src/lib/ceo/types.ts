@@ -147,7 +147,7 @@ export const STAGES: { id: CompanyStage; label: string; hint: string }[] = [
 ];
 
 export const ROLES: { id: RoleKind; label: string }[] = [
-  { id: "founder-ceo", label: "Pendiri & Pemimpin" },
+  { id: "founder-ceo", label: "Founder-CEO" },
   { id: "professional-ceo", label: "Pimpinan Profesional" },
   { id: "gm", label: "Manajer Unit" },
   { id: "coo", label: "Wakil Pimpinan Operasional" },

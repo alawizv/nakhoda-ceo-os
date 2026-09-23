@@ -369,7 +369,7 @@ export const STAGE_LABEL: Record<CompanyStage, string> = {
 };
 
 export const ROLE_LABEL: Record<RoleKind, string> = {
-  "founder-ceo": "Pendiri & Pemimpin",
+  "founder-ceo": "Founder-CEO",
   "professional-ceo": "Pimpinan Profesional",
   gm: "Manajer Unit",
   aspiring: "Calon Pemimpin",
