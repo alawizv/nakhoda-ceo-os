@@ -24,8 +24,8 @@ export function Onboarding() {
         <div className="mb-10 flex items-center gap-3">
           <Mark />
           <div>
-            <p className="font-display text-lg leading-none text-ink">Nakhoda</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.16em] text-subtle">Sistem operasi CEO</p>
+            <p className="font-display text-lg leading-none text-ink">Produktif</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.16em] text-subtle">Sistem Produktif</p>
           </div>
         </div>
 
@@ -35,15 +35,15 @@ export function Onboarding() {
               Jabatan CEO bukan gelar. Itu sistem.
             </h1>
             <p className="mt-5 max-w-prose text-base text-muted">
-              Nakhoda adalah kerangka kerja lengkap untuk mengarahkan perusahaan: delapan pilar,
-              ritme operasi, kualitas keputusan, mesin orang, dan disiplin diri. Bukan motivasi.
-              Mekanisme.
+              Produktif adalah kerangka kerja lengkap untuk mengelola bisnis: delapan aspek,
+              jadwal rutin, kualitas keputusan, manajemen tim, dan disiplin diri. Bukan motivasi.
+              Ini sistem.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ink">
               {[
-                "Diagnostik 32 pertanyaan di delapan pilar",
-                "Ritme harian, mingguan, bulanan, kuartalan",
-                "Log keputusan, prioritas, scorecard, rencana 90 hari",
+                "Evaluasi 32 pertanyaan di delapan aspek bisnis",
+                "Jadwal harian, mingguan, bulanan, kuartalan",
+                "Catatan keputusan, target utama, nilai bisnis, rencana 3 bulan",
                 "Panduan lengkap ada di menu setelah Anda masuk",
               ].map((item) => (
                 <li key={item} className="flex gap-3">

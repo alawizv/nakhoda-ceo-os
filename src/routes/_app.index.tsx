@@ -40,24 +40,24 @@ function Cockpit() {
   const overduePeople = people.filter((p) => !p.lastOneOnOne);
   const planDone = plan.outcomes.filter((o) => o.done).length;
 
-  const firstName = profile.name.split(" ")[0] || "Nakhoda";
+  const firstName = profile.name.split(" ")[0] || "Bos";
 
   return (
     <div className="space-y-8">
       <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <SectionKicker>
-            {longDate()} · {weekLabel()}
+          {longDate()} · {weekLabel()}
           </SectionKicker>
           <h1 className="mt-2 font-display text-4xl text-ink md:text-5xl">
-            Briefing, {firstName}.
+          Halo, {firstName}.
           </h1>
           <p className="mt-2 text-sm text-muted">
-            {profile.company} · {ROLE_LABEL[profile.role]} · {STAGE_LABEL[profile.stage]}
-            {" · "}
-            <Link to="/panduan" className="text-forest hover:underline">
-              Panduan
-            </Link>
+          {profile.company} · {ROLE_LABEL[profile.role]} · {STAGE_LABEL[profile.stage]}
+          {" · "}
+          <Link to="/panduan" className="text-forest hover:underline">
+            Lihat panduan
+          </Link>
           </p>
         </div>
         <div className="flex items-baseline gap-2">
@@ -70,42 +70,42 @@ function Cockpit() {
 
       {progress.filled === 0 && (
         <Panel className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <h2 className="font-display text-2xl">Mulai dari diagnosa, bukan dari kesibukan.</h2>
-            <p className="mt-1 max-w-prose text-sm text-muted">
-              32 pertanyaan, delapan pilar. Lima belas menit. Hasilnya menjadi peta 90 hari Anda.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <Button asChild>
-              <Link to="/diagnostik">
-                Buka diagnostik <ArrowRight className="size-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link to="/panduan">Baca panduan</Link>
-            </Button>
-          </div>
+        <div>
+          <h2 className="font-display text-2xl">Mulai dari evaluasi, bukan dari kesibukan.</h2>
+          <p className="mt-1 max-w-prose text-sm text-muted">
+            32 pertanyaan, delapan aspek. Lima belas menit. Hasilnya menjadi peta 3 bulan Anda.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild>
+            <Link to="/diagnostik">
+              Mulai evaluasi <ArrowRight className="size-4" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/panduan">Baca panduan</Link>
+          </Button>
+        </div>
         </Panel>
       )}
 
       <div className="grid gap-4 md:grid-cols-4">
-        <Stat label="Ritme minggu ini" value={`${ritualDone}/${WEEKLY_RITUALS.length}`} hint="ritual" to="/ritme" />
+        <Stat label="Jadwal minggu ini" value={`${ritualDone}/${WEEKLY_RITUALS.length}`} hint="tugas rutin" to="/ritme" />
         <Stat
-          label="Prioritas berisiko"
+          label="Target berisiko"
           value={String(atRisk.length)}
           hint={`dari ${priorities.length || 0}`}
           to="/prioritas"
           warn={atRisk.length > 0}
         />
         <Stat
-          label="Keputusan terbuka"
+          label="Keputusan tertunda"
           value={String(openDecisions.length)}
           hint="menunggu putusan"
           to="/keputusan"
         />
         <Stat
-          label="Rencana 90 hari"
+          label="Rencana 3 bulan"
           value={plan.outcomes.length ? `${planDone}/${plan.outcomes.length}` : "—"}
           hint={plan.theme || "belum disusun"}
           to="/rencana"
@@ -116,8 +116,8 @@ function Cockpit() {
         <Panel>
           <div className="flex items-start justify-between gap-3">
             <div>
-              <SectionKicker>Kompas delapan pilar</SectionKicker>
-              <h2 className="mt-1 font-display text-2xl">Posisi kemudi</h2>
+              <SectionKicker>Penilaian delapan aspek</SectionKicker>
+              <h2 className="mt-1 font-display text-2xl">Posisi Bisnis Anda</h2>
             </div>
             <Button asChild variant="ghost" size="sm">
               <Link to="/pilar">Semua pilar</Link>
@@ -126,7 +126,7 @@ function Cockpit() {
           <Radar scores={scores} />
           {weak.length > 0 && (
             <div className="mt-2 space-y-2">
-              <p className="text-xs uppercase tracking-[0.14em] text-subtle">Fokus pengembangan</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-subtle">Perlu diperbaiki</p>
               {weak.map((w) => {
                 const p = PILLARS.find((x) => x.id === w.id)!;
                 return (
@@ -149,8 +149,8 @@ function Cockpit() {
 
         <div className="space-y-4">
           <Panel>
-            <SectionKicker>Gerakan minggu ini</SectionKicker>
-            <h2 className="mt-1 font-display text-2xl">Yang tidak boleh terlewat</h2>
+            <SectionKicker>Tugas minggu ini</SectionKicker>
+            <h2 className="mt-1 font-display text-2xl">Yang harus dikerjakan</h2>
             <ul className="mt-4 space-y-2">
               {WEEKLY_RITUALS.slice(0, 5).map((r) => (
                 <li key={r.id} className="flex items-start gap-3 text-sm">
@@ -167,18 +167,18 @@ function Cockpit() {
               ))}
             </ul>
             <Button asChild variant="outline" size="sm" className="mt-4">
-              <Link to="/ritme">Buka ritme</Link>
+              <Link to="/ritme">Lihat jadwal</Link>
             </Button>
           </Panel>
 
           <Panel>
-            <SectionKicker>Sinyal</SectionKicker>
+            <SectionKicker>Catatan Penting</SectionKicker>
             <ul className="mt-3 space-y-3 text-sm">
               {overduePeople.length > 0 && (
                 <li className="flex justify-between gap-3">
-                  <span className="text-ink">{overduePeople.length} laporan belum 1:1</span>
+                  <span className="text-ink">{overduePeople.length} anggota tim belum ditinjau</span>
                   <Link to="/tim" className="text-forest">
-                    Tim
+                    Anggota Tim
                   </Link>
                 </li>
               )}
@@ -198,7 +198,7 @@ function Cockpit() {
               ))}
               {!overduePeople.length && !atRisk.length && !openDecisions.length && (
                 <li className="text-muted">
-                  Belum ada sinyal. Isi prioritas, tim, atau log keputusan.
+                  Belum ada catatan. Isi target utama, anggota tim, atau catatan keputusan.
                 </li>
               )}
             </ul>

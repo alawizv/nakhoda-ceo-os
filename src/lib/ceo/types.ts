@@ -137,19 +137,19 @@ export interface CadenceWeek {
 }
 
 export const STAGES: { id: CompanyStage; label: string; hint: string }[] = [
-  { id: "pre-seed", label: "Pra-seed", hint: "Mencari product-market fit" },
-  { id: "seed", label: "Seed", hint: "Validasi, tim awal, runway ketat" },
-  { id: "series-a", label: "Series A", hint: "Mesin pertumbuhan pertama" },
-  { id: "growth", label: "Growth", hint: "Skalakan apa yang sudah jalan" },
-  { id: "scale", label: "Scale-up", hint: "Sistem, lapisan kepemimpinan" },
+  { id: "pre-seed", label: "Baru mulai", hint: "Masih mencari produk yang cocok" },
+  { id: "seed", label: "Tahap awal", hint: "Mulai jualan, tim kecil, uang terbatas" },
+  { id: "series-a", label: "Berkembang", hint: "Mesin pertumbuhan pertama mulai jalan" },
+  { id: "growth", label: "Tumbuh pesat", hint: "Skalakan yang sudah berhasil" },
+  { id: "scale", label: "Skala besar", hint: "Butuh sistem dan manajer tambahan" },
   { id: "sme", label: "Bisnis mapan", hint: "UKM / perusahaan keluarga" },
-  { id: "enterprise", label: "Enterprise", hint: "Organisasi kompleks, banyak pemangku kepentingan" },
+  { id: "enterprise", label: "Perusahaan besar", hint: "Banyak divisi dan pemangku kepentingan" },
 ];
 
 export const ROLES: { id: RoleKind; label: string }[] = [
-  { id: "founder-ceo", label: "Founder-CEO" },
-  { id: "professional-ceo", label: "CEO profesional" },
-  { id: "gm", label: "GM / Kepala unit" },
-  { id: "coo", label: "COO yang menyiapkan diri" },
-  { id: "aspiring", label: "Calon CEO" },
+  { id: "founder-ceo", label: "Pendiri & Pemimpin" },
+  { id: "professional-ceo", label: "Pimpinan Profesional" },
+  { id: "gm", label: "Manajer Unit" },
+  { id: "coo", label: "Wakil Pimpinan Operasional" },
+  { id: "aspiring", label: "Calon Pemimpin" },
 ];

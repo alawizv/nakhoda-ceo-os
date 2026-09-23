@@ -301,7 +301,7 @@ export const useCeoStore = create<CeoState>()(
           cadence: [],
         }),
     }),
-    { name: "nakhoda-ceo-os", skipHydration: true, version: 1 },
+    { name: "produktif-app", skipHydration: true, version: 1 },
   ),
 );
 
@@ -359,19 +359,19 @@ export function suggestPlanFromGaps(answers: Record<string, number>): NinetyDay 
 }
 
 export const STAGE_LABEL: Record<CompanyStage, string> = {
-  "pre-seed": "Pra-seed",
-  seed: "Seed",
-  "series-a": "Series A",
-  growth: "Growth",
-  scale: "Scale-up",
+  "pre-seed": "Baru mulai",
+  seed: "Tahap awal",
+  "series-a": "Berkembang",
+  growth: "Tumbuh pesat",
+  scale: "Skala besar",
   sme: "Bisnis mapan",
-  enterprise: "Enterprise",
+  enterprise: "Perusahaan besar",
 };
 
 export const ROLE_LABEL: Record<RoleKind, string> = {
-  "founder-ceo": "Founder-CEO",
-  "professional-ceo": "CEO profesional",
-  gm: "GM / Kepala unit",
-  aspiring: "Calon CEO",
-  coo: "COO",
+  "founder-ceo": "Pendiri & Pemimpin",
+  "professional-ceo": "Pimpinan Profesional",
+  gm: "Manajer Unit",
+  aspiring: "Calon Pemimpin",
+  coo: "Wakil Pimpinan Operasional",
 };

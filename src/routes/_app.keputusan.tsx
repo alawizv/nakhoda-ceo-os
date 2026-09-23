@@ -37,13 +37,13 @@ function Keputusan() {
       <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <SectionKicker>Kualitas keputusan</SectionKicker>
-          <h1 className="mt-2 font-display text-4xl md:text-5xl">Pintu satu arah dan dua arah</h1>
+          <h1 className="mt-2 font-display text-4xl md:text-5xl">Keputusan Besar dan Kecil</h1>
           <p className="mt-3 max-w-prose text-muted">
-            Bezos membagi dunia menjadi dua. Pintu dua arah: cepat, reversibel, delegasikan. Pintu
-            satu arah: lambat, tulis memo, pre-mortem, satu nama yang memutuskan.
+            Keputusan kecil: cepat, bisa dicoba dulu, kalau salah bisa diubah. Keputusan besar:
+            lambat, pikirkan matang-matang, tulis alasannya supaya tidak diulang terus.
           </p>
         </div>
-        <Button onClick={() => setOpen(true)}>Catat keputusan</Button>
+        <Button onClick={() => setOpen(true)}>Catat keputusan baru</Button>
       </header>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
@@ -91,7 +91,7 @@ function Keputusan() {
                       form.kind === k ? "border-forest bg-forest text-forest-fg" : "border-border",
                     )}
                   >
-                    {k === "one-way" ? "Satu arah" : "Dua arah"}
+                    {k === "one-way" ? "Besar (sulit diubah)" : "Kecil (bisa dicoba)"}
                   </button>
                 ))}
               </div>
@@ -135,7 +135,7 @@ function Keputusan() {
       {decisions.length === 0 && !open ? (
         <EmptyState
           title="Log masih kosong"
-          body="Keputusan yang tidak ditulis akan dibuka ulang setiap minggu. Mulai dari yang tertahan di meja Anda."
+          body="Keputusan yang tidak ditulis akan diulang terus. Mulai dari yang tertahan di meja Anda."
           action={<Button onClick={() => setOpen(true)}>Catat yang pertama</Button>}
         />
       ) : (
@@ -169,7 +169,7 @@ function DecisionCard({
         </div>
         <div className="flex flex-wrap gap-2">
           <Badge tone={d.kind === "one-way" ? "warn" : "neutral"}>
-            {d.kind === "one-way" ? "Satu arah" : "Dua arah"}
+            {d.kind === "one-way" ? "Besar" : "Kecil"}
           </Badge>
           <select
             className="h-8 rounded-sm border border-border bg-surface px-2 text-xs"

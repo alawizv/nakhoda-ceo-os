@@ -25,18 +25,18 @@ import { ROLE_LABEL, STAGE_LABEL, useCeoStore } from "@/lib/ceo/store";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { to: "/", label: "Kokpit", icon: Compass, group: "Operasi" },
-  { to: "/ritme", label: "Ritme", icon: CalendarClock, group: "Operasi" },
-  { to: "/prioritas", label: "Prioritas", icon: Target, group: "Operasi" },
-  { to: "/scorecard", label: "Scorecard", icon: Gauge, group: "Operasi" },
-  { to: "/rencana", label: "90 Hari", icon: Flag, group: "Operasi" },
-  { to: "/pilar", label: "8 Pilar", icon: Layers, group: "Kepemimpinan" },
-  { to: "/diagnostik", label: "Diagnostik", icon: Activity, group: "Kepemimpinan" },
-  { to: "/keputusan", label: "Keputusan", icon: Scale, group: "Kepemimpinan" },
-  { to: "/tim", label: "Tim", icon: Users, group: "Kepemimpinan" },
-  { to: "/jurnal", label: "Jurnal", icon: BookOpen, group: "Refleksi" },
+  { to: "/", label: "Beranda", icon: Compass, group: "Ringkasan" },
+  { to: "/ritme", label: "Jadwal Rutin", icon: CalendarClock, group: "Ringkasan" },
+  { to: "/prioritas", label: "Target Utama", icon: Target, group: "Ringkasan" },
+  { to: "/scorecard", label: "Nilai Bisnis", icon: Gauge, group: "Ringkasan" },
+  { to: "/rencana", label: "Rencana 3 Bulan", icon: Flag, group: "Ringkasan" },
+  { to: "/pilar", label: "8 Aspek Bisnis", icon: Layers, group: "Evaluasi" },
+  { to: "/diagnostik", label: "Evaluasi Diri", icon: Activity, group: "Evaluasi" },
+  { to: "/keputusan", label: "Catatan Keputusan", icon: Scale, group: "Evaluasi" },
+  { to: "/tim", label: "Anggota Tim", icon: Users, group: "Evaluasi" },
+  { to: "/jurnal", label: "Catatan Harian", icon: BookOpen, group: "Refleksi" },
   { to: "/panduan", label: "Panduan", icon: CircleHelp, group: "Refleksi" },
-  { to: "/playbook", label: "Playbook", icon: ScrollText, group: "Refleksi" },
+  { to: "/playbook", label: "Tips & Strategi", icon: ScrollText, group: "Refleksi" },
 ] as const;
 
 const MOBILE_PRIMARY = ["/", "/pilar", "/ritme", "/diagnostik"] as const;
@@ -88,7 +88,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <div className="flex min-h-dvh items-center justify-center bg-bg text-muted">
         <div className="flex items-center gap-3">
           <Mark className="size-7" />
-          <span className="text-sm tracking-wide">Nakhoda</span>
+          <span className="text-sm tracking-wide">Produktif</span>
         </div>
       </div>
     );
@@ -102,8 +102,8 @@ export function Shell({ children }: { children: ReactNode }) {
         <div className="flex items-center gap-2.5 px-5 py-6">
           <Mark className="size-8" />
           <div>
-            <p className="font-display text-base leading-none">Nakhoda</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-subtle">CEO OS</p>
+            <p className="font-display text-base leading-none">Produktif</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-subtle">Sistem Produktif</p>
           </div>
         </div>
         <NavList pathname={pathname} />
@@ -114,7 +114,7 @@ export function Shell({ children }: { children: ReactNode }) {
             className="flex h-11 w-full items-center gap-2 rounded-md px-3 text-sm text-muted hover:bg-surface-2 hover:text-ink"
           >
             <Settings2 className="size-4" />
-            Profil & data
+            Pengaturan Profil
           </button>
         </div>
       </aside>
@@ -122,7 +122,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-20 flex items-center justify-between border-b border-border bg-bg/90 px-4 py-3 backdrop-blur-sm md:hidden">
         <div className="flex items-center gap-2">
           <Mark className="size-7" />
-          <span className="font-display text-base">Nakhoda</span>
+          <span className="font-display text-base">Produktif</span>
         </div>
         <Button variant="ghost" size="icon" onClick={() => setSettingsOpen(true)} aria-label="Pengaturan">
           <Settings2 className="size-5" />
@@ -245,7 +245,7 @@ function SettingsSheet({ onClose }: { onClose: () => void }) {
       <div className="absolute inset-x-0 bottom-0 max-h-[90vh] overflow-y-auto rounded-t-xl border border-border bg-surface p-5 md:inset-auto md:right-6 md:top-6 md:bottom-auto md:w-[28rem] md:rounded-xl">
         <div className="mb-5 flex items-start justify-between">
           <div>
-            <p className="font-display text-2xl">Profil</p>
+            <p className="font-display text-2xl">Pengaturan</p>
             <p className="mt-1 text-sm text-muted">
               {ROLE_LABEL[profile.role]} · {STAGE_LABEL[profile.stage]}
             </p>
@@ -267,7 +267,7 @@ function SettingsSheet({ onClose }: { onClose: () => void }) {
         <div className="mt-8 flex flex-col gap-2">
           <Button asChild variant="outline">
             <Link to="/panduan" onClick={onClose}>
-              Buka panduan
+              Lihat panduan lengkap
             </Link>
           </Button>
           <Button

@@ -9,7 +9,7 @@ function Playbook() {
     <div className="space-y-10">
       <header>
         <SectionKicker>Doktrin</SectionKicker>
-        <h1 className="mt-2 font-display text-4xl md:text-5xl">Dua belas prinsip Nakhoda</h1>
+        <h1 className="mt-2 font-display text-4xl md:text-5xl">Tips & Strategi Bisnis</h1>
         <p className="mt-3 max-w-prose text-muted">
           Bukan afirmasi. Mekanisme. Jika satu prinsip bertentangan dengan kalender Anda, kalender
           yang salah — atau prinsip itu belum Anda yakini. Cara klik tiap ruang ada di{" "}
@@ -47,7 +47,7 @@ function Playbook() {
         <SectionKicker>Rak yang cukup</SectionKicker>
         <h2 className="mt-2 font-display text-3xl">Bacaan yang membentuk kerangka ini</h2>
         <p className="mt-2 max-w-prose text-sm text-muted">
-          Grove, Rumelt, Horowitz, Mochary, Lencioni, Cagan. Nakhoda adalah sintesis operasional —
+          Grove, Rumelt, Horowitz, Mochary, Lencioni, Cagan. Produktif adalah sintesis operasional —
           bukan pengganti membaca sumbernya.
         </p>
         <ul className="mt-5 divide-y divide-border rounded-xl border border-border bg-surface">

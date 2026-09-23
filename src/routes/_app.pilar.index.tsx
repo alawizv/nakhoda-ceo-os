@@ -15,7 +15,7 @@ function PilarIndex() {
     <div className="space-y-8">
       <header>
         <SectionKicker>Kerangka kerja</SectionKicker>
-        <h1 className="mt-2 font-display text-4xl md:text-5xl">Delapan pilar Nakhoda</h1>
+        <h1 className="mt-2 font-display text-4xl md:text-5xl">Delapan Aspek Bisnis</h1>
         <p className="mt-3 max-w-prose text-muted">
           CEO yang hebat tidak menguasai seribu teknik. Ia menjaga delapan pekerjaan yang tidak
           boleh dibiarkan yatim. Setiap pilar punya pertanyaan, ritme, dan anti-pola.

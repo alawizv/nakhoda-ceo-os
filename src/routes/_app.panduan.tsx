@@ -23,7 +23,7 @@ function Panduan() {
     <div className="space-y-10">
       <header>
         <SectionKicker>Manual operasi</SectionKicker>
-        <h1 className="mt-2 font-display text-4xl md:text-5xl">Cara memakai Nakhoda</h1>
+        <h1 className="mt-2 font-display text-4xl md:text-5xl">Cara memakai Produktif</h1>
         <p className="mt-3 max-w-prose text-muted">
           Ini bukan chatbot dan bukan AI. Ini buku kerja CEO yang bisa diklik. Isi, ulangi,
           tinjau. Perusahaan berubah dari ritme — bukan dari satu sesi semangat.
@@ -51,7 +51,7 @@ function Panduan() {
         <SectionKicker>01</SectionKicker>
         <h2 className="font-display text-3xl">App ini buat apa, aslinya</h2>
         <p className="max-w-prose text-muted">
-          Nakhoda menahan pekerjaan CEO yang biasanya hanya ada di kepala: arah, orang, eksekusi,
+          Produktif menahan pekerjaan CEO yang biasanya hanya ada di kepala: arah, orang, eksekusi,
           keputusan, uang, produk, budaya, dan diri. Setiap ruang adalah mekanisme — daftar
           prioritas yang dibatasi, log keputusan, peta tim, scorecard, jurnal minggu.
         </p>
@@ -111,7 +111,7 @@ function Panduan() {
         <SectionKicker>04</SectionKicker>
         <h2 className="font-display text-3xl">14 hari pertama — urutan yang benar</h2>
         <p className="max-w-prose text-sm text-muted">
-          Kalau dikerjakan acak, Nakhoda jadi daftar to-do. Ikuti urutan ini sekali. Setelah itu, ritme mingguan yang memegang.
+          Kalau dikerjakan acak, Produktif jadi daftar to-do. Ikuti urutan ini sekali. Setelah itu, jadwal rutin yang memegang.
         </p>
         <ol className="space-y-3">
           {[
